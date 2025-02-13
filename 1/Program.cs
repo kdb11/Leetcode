@@ -35,3 +35,13 @@ int n = 3;
 
 Console.WriteLine(nums1.Length);
 solution5.Merge(nums1,  m, nums2, n);
+
+
+int[] nums6 = [2,2,1,1,1,2,2];
+
+solution6.MajorityElement(nums6);
+
+
+int stairs = 3;
+
+solution7.ClimbStairs(stairs);
