@@ -45,3 +45,9 @@ solution6.MajorityElement(nums6);
 int stairs = 3;
 
 solution7.ClimbStairs(stairs);
+
+
+int[] nums8 = [2,5,5,11];
+int target = 10;
+
+solution8.TwoSum( nums8, target);

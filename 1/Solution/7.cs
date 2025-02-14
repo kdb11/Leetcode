@@ -6,8 +6,8 @@ namespace Solution
     {
         public static int ClimbStairs(int n) {
             
-            int firstWay = 0;
-
+            /* int firstWay = 0;
+ */
             for (int i = 0; i < n; i++)
             {
                 /* if ()
