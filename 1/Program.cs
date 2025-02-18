@@ -57,3 +57,9 @@ string ransomNote = "aab";
 string magazine = "baa";
 
 solution9.CanConstruct( ransomNote, magazine);
+
+
+string pattern = "abba";
+string s = "dog cat cat dog";
+
+solution10.WordPattern( pattern, s);
