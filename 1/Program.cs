@@ -51,3 +51,9 @@ int[] nums8 = [2,5,5,11];
 int target = 10;
 
 solution8.TwoSum( nums8, target);
+
+
+string ransomNote = "aab";
+string magazine = "baa";
+
+solution9.CanConstruct( ransomNote, magazine);
