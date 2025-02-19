@@ -65,6 +65,6 @@ string s = "dog cat cat dog";
 solution10.WordPattern( pattern, s);
 
 
-int shayan = 19;
+int shayan = 2;
 
 solution11.IsHappy(shayan);

@@ -4,10 +4,10 @@ namespace Solution
     {
         public static bool IsHappy(int n)
         {
-            int separateNumbers = 0;
+            int separateNumbers;
             bool niklas = true;
             bool result = false;
-            int sum = 0;
+            int sum;
 
             Dictionary<int, int> numbersDictionary = new Dictionary<int, int>();
 
@@ -15,25 +15,33 @@ namespace Solution
 
             while (niklas)
             {
-                foreach (var number in numberAsString)
+                for (int i = 0; i < numberAsString.Length; i++)
                 {
-                    separateNumbers = int.Parse(number.ToString());
+                    separateNumbers = int.Parse(numberAsString[i].ToString());
 
                     int multipliedNumbers = separateNumbers * separateNumbers;
 
-                    numbersDictionary.Add(separateNumbers, multipliedNumbers);
+                    numbersDictionary.Add(i, multipliedNumbers);
                 }
 
+                sum = 0;
                 foreach (var element in numbersDictionary)
                 {
                     sum += element.Value;
-
                 }
                 Console.WriteLine(sum);
                 if (sum == 1)
                 {
-                    niklas = false;
                     result = true;
+                    break;
+                }
+                numbersDictionary.Clear();
+                numberAsString = sum.ToString();
+                Console.WriteLine(sum);
+                if (4 == sum || n == sum)
+                {
+                    result = false;
+                    break;
                 }
             }
 
