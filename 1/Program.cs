@@ -63,3 +63,8 @@ string pattern = "abba";
 string s = "dog cat cat dog";
 
 solution10.WordPattern( pattern, s);
+
+
+int shayan = 19;
+
+solution11.IsHappy(shayan);
