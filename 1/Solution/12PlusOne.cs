@@ -1,17 +1,21 @@
+using System.Numerics;
+
 namespace Solution
-{   
-     class solution12
+{
+    class solution12
     {
-        public static int[] PlusOne(int[] digits) {
+        public static int[] PlusOne(int[] digits)
+        {
+
+            string digitsToString = "";
             
-            string digitsToString = ""; 
             foreach (var number in digits)
             {
                 digitsToString += number.ToString();
-            }   
+            }
             Console.WriteLine(digitsToString);
 
-            double.TryParse(digitsToString, out double numberFromDigits);
+            BigInteger.TryParse(digitsToString, out BigInteger numberFromDigits);
 
             Console.WriteLine(numberFromDigits);
 
@@ -19,12 +23,12 @@ namespace Solution
 
             string numberAfterAdditionAsString = numberFromDigits.ToString();
 
-            double[] reusltArray = new double [numberAfterAdditionAsString.Length];
+            int[] reusltArray = new int[numberAfterAdditionAsString.Length];
 
             for (int i = 0; i < numberAfterAdditionAsString.Length; i++)
             {
-                double eachNumberAfterAddition = double.Parse(numberAfterAdditionAsString[i].ToString());
-                reusltArray[i] = eachNumberAfterAddition;
+                
+                reusltArray[i] = int.Parse(numberAfterAdditionAsString[i].ToString());
             }
 
             foreach (var number in reusltArray)
@@ -32,7 +36,7 @@ namespace Solution
                 Console.WriteLine(number);
             }
 
-            return [];
+            return reusltArray;
         }
     }
 }
