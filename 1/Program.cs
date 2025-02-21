@@ -1,5 +1,7 @@
 ﻿using Solution;
 
+/*
+
 int[] prices = [7,1,5,3,6,4];
 
 solution2.MaxProfit(prices);
@@ -12,20 +14,20 @@ solution1.RemoveDuplicates(nums);
 
 
 
-/* int[] n = [3,2,2,3];
-int v = 3; */
+int[] n = [3,2,2,3];
+int v = 3;
 
-/* int[] n = [0,1,2,2,3,0,4,2];
+int[] n = [0,1,2,2,3,0,4,2];
 int v = 2;
 
-Solution3.RemoveElement( n, v); */
+Solution3.RemoveElement( n, v);
 
 
 
-/* string[] strs = ["flower","flow","flight"];
+string[] strs = ["flower","flow","flight"];
 
 Solution4.LongestCommonPrefix(strs);
- */
+
 
 
 int[] nums1 = [1,2,3,0,0,0];
@@ -72,4 +74,10 @@ solution11.IsHappy(shayan);
 
 int[] digits = [7,2,8,5,0,9,1,2,9,5,3,6,6,7,3,2,8,4,3,7,9,5,7,7,4,7,4,9,4,7,0,1,1,1,7,4,0,0,7];
 
-solution12.PlusOne(digits);
+solution12.PlusOne(digits); */
+
+
+string s = "foo";
+string t = "bar";
+
+solution13.IsIsomorphic( s,  t);
