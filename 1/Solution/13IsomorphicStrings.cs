@@ -4,55 +4,50 @@ namespace Solution
     {
         public static bool IsIsomorphic(string s, string t)
         {
-            string resultCheck = "";
-
             Dictionary<int, char> firstStringDictonary = new Dictionary<int, char>();
-            Dictionary<char, int> secondStringDictonary = new Dictionary<char, int>();
+            Dictionary<int, char> secondStringDictonary = new Dictionary<int, char>();
+            int firstStringExtra = 0;
+            int secondStringExtra = 0;
 
             for (int i = 0; i < s.Length; i++)
             {
-                if (firstStringDictonary.ContainsKey(s[i]))
+                if (firstStringDictonary.ContainsValue(s[i]))
                 {
-
+                    firstStringExtra += i;
                     continue;
                 }
                 else
                 {
                     firstStringDictonary.Add(i, s[i]);
                 }
-                /* Console.WriteLine(firstStringDictonary[i]); */
             }
 
             for (int i = 0; i < t.Length; i++)
             {
-                if (secondStringDictonary.ContainsKey(t[i]))
+                if (secondStringDictonary.ContainsValue(t[i]))
                 {
-
+                    secondStringExtra += i;
                     continue;
                 }
                 else
                 {
-                    secondStringDictonary.Add(t[i], i);
+                    secondStringDictonary.Add(i, t[i]);
                 }
-
             }
-
             for (int i = 0; i < firstStringDictonary.Count; i++)
             {
-                /* if (secondStringDictonary[t[i]] == firstStringDictonary[i])
-                resultCheck += firstStringDictonary[secondStringDictonary[t[i]]]; */
-
-                Console.WriteLine(firstStringDictonary[secondStringDictonary[t[i]]]);
-                Console.WriteLine();
+                
+                KeyValuePair<int, char> firstStringItems = secondStringDictonary.ElementAt(i);
+                KeyValuePair<int, char> secondStringItems = secondStringDictonary.ElementAt(i);
 
             }
 
-            
+            /* Console.WriteLine(firstStringExtra);
+            Console.WriteLine(secondStringExtra); */
 
-/*             Console.WriteLine(t);
-            Console.WriteLine(resultCheck); */
+            firstStringDictonary.AsParallel().ForAll(x => Console.WriteLine(x.Key));
 
-            if (resultCheck == t)
+            if (firstStringExtra == secondStringExtra)
             {
                 return true;
             }
