@@ -6,8 +6,14 @@ namespace Solution
         {
             Dictionary<int, char> firstStringDictonary = new Dictionary<int, char>();
             Dictionary<int, char> secondStringDictonary = new Dictionary<int, char>();
+            Dictionary<char, int> reverseFirstStringDictionary = new Dictionary<char, int>();
+            Dictionary<char, int> reverseSecondStringDictionary = new Dictionary<char, int>();
             int firstStringExtra = 0;
             int secondStringExtra = 0;
+            string checkFirst = "";
+            string checkSecond = "";
+            Int64 checkFirstInt = 0;
+            Int64 checkSecondInt = 0;
 
             for (int i = 0; i < s.Length; i++)
             {
@@ -19,6 +25,7 @@ namespace Solution
                 else
                 {
                     firstStringDictonary.Add(i, s[i]);
+                    reverseFirstStringDictionary.Add(s[i], i);
                 }
             }
 
@@ -32,22 +39,25 @@ namespace Solution
                 else
                 {
                     secondStringDictonary.Add(i, t[i]);
+                    reverseSecondStringDictionary.Add(t[i], i);
                 }
             }
-            for (int i = 0; i < firstStringDictonary.Count; i++)
-            {
-                
-                KeyValuePair<int, char> firstStringItems = secondStringDictonary.ElementAt(i);
-                KeyValuePair<int, char> secondStringItems = secondStringDictonary.ElementAt(i);
 
+            foreach (var key in s)
+            {
+                checkFirst += reverseFirstStringDictionary[key].ToString();
+                checkFirstInt += reverseFirstStringDictionary[key];
+            }
+            foreach (var key in t)
+            {
+                checkSecond += reverseSecondStringDictionary[key].ToString();
+                checkSecondInt += reverseSecondStringDictionary[key];
             }
 
-            /* Console.WriteLine(firstStringExtra);
-            Console.WriteLine(secondStringExtra); */
+            Console.WriteLine(checkFirst);
+            Console.WriteLine(checkFirst);
 
-            firstStringDictonary.AsParallel().ForAll(x => Console.WriteLine(x.Key));
-
-            if (firstStringExtra == secondStringExtra)
+            if (firstStringExtra == secondStringExtra && checkFirstInt == checkSecondInt && checkFirst == checkSecond)
             {
                 return true;
             }
