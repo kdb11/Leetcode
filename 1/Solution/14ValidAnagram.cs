@@ -4,8 +4,8 @@ namespace Solution
     {
         public static bool IsAnagram(string s, string t)
         {
-            List<char> ifEmptyThereIsAnagram = [];
-            List<char> tToList = [];
+            Dictionary<char, int> chars = new Dictionary<char, int>();
+
             if (s.Length != t.Length)
             {
                 return false;
@@ -13,50 +13,19 @@ namespace Solution
 
             foreach (var c in s)
             {
-                ifEmptyThereIsAnagram.Add(c);
+                chars.TryAdd(c, 0);
+                chars[c] += 1;
             }
+
             foreach (var c in t)
             {
-                tToList.Add(c);
-            }
-
-/*             foreach (var element in ifEmptyThereIsAnagram)
-            {
-                Console.WriteLine(element);
-            } */
-
-            /* Dictionary<char, char> anagram = new Dictionary<char, char>(); */
-
-            for (int i = 0; i < s.Length; i++)
-            {
-                /* if (s[i] == t[i])
+                if (chars.ContainsKey(c) == false)
                 {
-                    anagram.Add(s[i], t[i]);
-                    ifEmptyThereIsAnagram.Remove(s[i]);
-                    Console.WriteLine(s[i]);
-                } */
-
-                for (int j = 0; j < s.Length; j++)
-                {
-
-                    if (s[i] == tToList[j])
-                    {
-                        ifEmptyThereIsAnagram.Remove(s[i]);
-                        tToList[j] = '0';
-                    }
+                    
                 }
             }
 
-/*             foreach (var element in ifEmptyThereIsAnagram)
-            {
-                Console.WriteLine(element);
-            } */
-            if (ifEmptyThereIsAnagram.Count == 0)
-            {
-                return true;
-            } else{
-                return false;
-            }
+            
 
         }
     }
