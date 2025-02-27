@@ -83,7 +83,7 @@ string t = "abcdefghijklmnopqrstuvwxyzck";
 solution13.IsIsomorphic( s,  t); */
 
 
-string a = "anagram";
-string b = "nagaram";
+string a = "aacc";
+string b = "ccac";
 
 solution14.IsAnagram( a,  b);
