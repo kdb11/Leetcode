@@ -87,3 +87,5 @@ string a = "aacc";
 string b = "ccac";
 
 solution14.IsAnagram( a,  b);
+
+solution15.SearchInsert([1,3,5,6], 2);
