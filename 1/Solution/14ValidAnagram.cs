@@ -2,7 +2,7 @@ namespace Solution
 {
     class solution14
     {
-        public static bool IsAnagram(string s, string t)
+        /* public static bool IsAnagram(string s, string t)
         {
             Dictionary<char, int> chars = new Dictionary<char, int>();
 
@@ -19,14 +19,15 @@ namespace Solution
 
             foreach (var c in t)
             {
-                if (chars.ContainsKey(c) == false)
+                if (chars.ContainsKey(c) == false || chars[c] == 0)
                 {
-                    
+                    return false;
                 }
+                chars[c] -= 1;
             }
 
-            
+            return true;
 
-        }
+        } */
     }
 }
