@@ -92,4 +92,8 @@ solution14.IsAnagram( a,  b); */
 
 /* solution16.LargestAltitude([-5,1,5,0,-7]); */
 
-solution17.ReverseList([1,2,3,4,5]);
+/* List<int> head = [1,2,3,4,5];
+
+solution17.ReverseList(head); */
+
+solution18.MergeAlternately("abc", "pqr");
