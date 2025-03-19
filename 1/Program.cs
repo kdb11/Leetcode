@@ -96,4 +96,4 @@ solution14.IsAnagram( a,  b); */
 
 solution17.ReverseList(head); */
 
-solution18.MergeAlternately("abc", "pqr");
+solution18.MergeAlternately("abc", "pqrSSS");
