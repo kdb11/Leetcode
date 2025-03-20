@@ -98,4 +98,6 @@ solution17.ReverseList(head); */
 
 /* solution18.MergeAlternately("abc", "pqrSSS"); */
 
-solution19.IsPalindrome(1211);
+/* solution19.IsPalindrome(1211); */
+
+solution20.IsSubsequence("aaaaaa", "bbaaaa");

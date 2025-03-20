@@ -12,8 +12,6 @@ namespace Solution
 
             altitude += gain[i];
 
-            /* Console.WriteLine(altitude); */
-
             if (largestAltitudeYet < altitude)
             {
                 largestAltitudeYet = altitude;
