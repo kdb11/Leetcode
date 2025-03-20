@@ -96,4 +96,6 @@ solution14.IsAnagram( a,  b); */
 
 solution17.ReverseList(head); */
 
-solution18.MergeAlternately("abc", "pqrSSS");
+/* solution18.MergeAlternately("abc", "pqrSSS"); */
+
+solution19.IsPalindrome(1211);
