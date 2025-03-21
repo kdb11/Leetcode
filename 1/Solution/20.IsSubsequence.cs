@@ -4,23 +4,19 @@ namespace Solution
     {
         public static bool IsSubsequence(string s, string t)
         {
-            if (s == ""){
-                return true;
-            }
 
-            string result = "";
+            
+            List<char> result = [];
 
             for (int i = 0; i < t.Length; i++)
             {
                 for (int j = 0; j < s.Length; j++)
                 {
+
+                    /* Console.WriteLine(s[j]); */
                     if (s[j] == t[i])
                     {
-                        result += s[j];
-                    }
-
-                    if (result == s){
-                        return true;
+                        result.Add(s[j]);
                     }
                 }
             }
