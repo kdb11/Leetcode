@@ -21,7 +21,8 @@ namespace Solution
                 }
             }
 
-            Console.WriteLine(result);
+            Console.WriteLine(result); 
+            Console.WriteLine(t);
 
             return false;
         }
